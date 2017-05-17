@@ -1,5 +1,5 @@
-/// <reference path="../../../../typings/index.d.ts" />
 "use strict";
+/// <reference path="../../../../typings/index.d.ts" />
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
