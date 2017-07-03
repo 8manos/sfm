@@ -8,7 +8,7 @@
   <nav id="hamburger-menu" *ngIf="menuopen">
     <ul>
       <li><a (click)="abouttoggle()" href="#">About</a></li>
-      <li><a (click)="pasttoggle()" href="#">Current and Past Exhibitions</a></li>
+      <li><a (click)="pasttoggle()" href="#">Exhibitions History</a></li>
       <li><a (click)="view()" href="#">I want to see the exhibition</a></li>
       <li><a (click)="submit()" href="#">I want to have an unauthorized sfmoma show</a></li>
     </ul>
@@ -16,17 +16,17 @@
 
   <div class="about_page" *ngIf="about">
     <div class="inner">
-      <h3>What is Unauthorized SFMOMA Show</h3>
-      <p>Unauthorized SFMOMA Show is a series of solo shows that take place within SFMOMA’s  public spaces from April 6th - July 2nd on a rotating basis. Similar to SFMOMA’s mission statement, Unauthorized SFMOMA Show is dedicated to making the art for our time a vital and meaningful part of public life. Unauthorized SFMOMA Show is also guided by our commitment to fostering creativity and embracing new ways of seeing the world and the institutions that aim to represent it. To fulfill this goal, we have created a space where to exhibit and share the artwork that everybody wants to see exhibited and shared.</p>
+      <h3>What was Unauthorized SFMOMA Show</h3>
+      <p>Unauthorized SFMOMA Show was a series of solo shows that took place within SFMOMA’s public spaces from April 6th - July 2nd, 2017 on a rotating basis. Similar to SFMOMA’s mission statement, Unauthorized SFMOMA Show was dedicated to making the art for our time a vital and meaningful part of public life. Unauthorized SFMOMA Show was also guided by our commitment to fostering creativity and embracing new ways of seeing the world and the institutions that aim to represent it. To fulfill this goal, we created a space where to exhibit and share the artwork that everybody wanted to see exhibited and shared.</p>
 
-      <h3>How to exhibit work</h3>
-      <p>In order to participate in the exhibition go to "I WANT TO HAVE AN UNAUTHORIZED SFMOMA SHOW", fill in the form, upload your work in digital format (.jpg, .png or .gif) and press "SUBMIT". All works are immediately accepted, each submission automatically constituting an Unauthorized SFMOMA Solo Show on view at SFMOMA via the same website ( http://sfmoma.show ). Each exhibition starts when a work is submitted and ends when a new work is submitted. There are NO application or exhibition fees.</p>
+      <h3>How were the works submitted</h3>
+      <p>In order to participate in the exhibition, the submitter went to the "I WANT TO HAVE AN UNAUTHORIZED SFMOMA SHOW" section of this website, filled in the form, uploaded her/his work in digital format (.jpg, .png or .gif) and pressed "SUBMIT". All works were immediately accepted, each submission automatically constituting an Unauthorized SFMOMA Solo Show on view at SFMOMA via the same website ( http://sfmoma.show ). Each exhibition started when a work was submitted and ended when a new work was submitted. There were NO application or exhibition fees.</p>
 
-      <h3>How to visit the exhibition</h3>
-      <p>Unauthorized SFMOMA Shows take place at SFMOMA’s public spaces via http://sfmoma.show and thus, the only requirement to visit Unauthorized SFMOMA Shows is to be physically present at SFMOMA and have access to a device that can connect to the Internet. Once there, go to http://sfmoma.show to see the show (please, allow location access to Unauthorized SFMOMA Show in order to confirm your location). Note that public spaces at SFMOMA don't require ticket and thus Unauthorized SFMOMA Shows are free to visit.</p>
+      <h3>How could the shows be visited</h3>
+      <p>Unauthorized SFMOMA Shows took place at SFMOMA’s public spaces via http://sfmoma.show and thus, the only requirement to visit Unauthorized SFMOMA Shows was to be physically present at SFMOMA and have access to a device that could connect to the Internet. Once there, the visitor went to the http://sfmoma.show website to see the show -after allowing location access to Unauthorized SFMOMA Show in order to confirm her/his location. Note that public spaces at SFMOMA don’t require ticket and thus Unauthorized SFMOMA Shows were free to visit.</p>
 
       <h3>Catalog</h3>
-      <p>A catalog featuring all Unauthorized SFMOMA Shows will be printed in summer 2017.</p>
+      <p>A catalog featuring all Unauthorized SFMOMA Shows will be printed in late summer 2017.</p>
 
       <h3>Contact</h3>
       <p>If you have any questions and/or comments please don’t hesitate to contact us at <a href="mailto:unauthorized@sfmoma.show">unauthorized@sfmoma.show</a></p>
@@ -38,7 +38,6 @@
 
   <div class="currentpast" *ngIf="currentpast">
     <div class="inner">
-      <h1>CURRENT:</h1>
       <article>
         <h1>UNAUTHORIZED SFMOMA SHOW #{{count}}</h1>
         <h2>{{item?.todoMessage}}</h2>
@@ -46,8 +45,6 @@
         <h4 *ngIf="item?.todoMedium">{{item?.todoMedium}} <span *ngIf="item?.todoSize">({{item?.todoSize}})</span></h4>
         <h5>On view from {{item?.createdAt | date:'medium'}} through now.</h5>
       </article>
-      <hr>
-      <h1>PAST:</h1>
       <article *ngFor="let artwork of all; let i = index; ">
         <h1>UNAUTHORIZED SFMOMA SHOW #{{count - i - 1}}</h1>
         <h2>{{artwork?.todoMessage}}</h2>
@@ -64,7 +61,7 @@
       {{message || 'Please, allow location access to Unauthorized SFMOMA Show in order to confirm that you are currently at SFMOMA.'}}
     </p>
 
-    <p class="conditional" *ngIf="!inmoma && located">You have to be at SFMOMA to visit this exhibition. Unfortunately, it looks like you are currently at: {{center}}, which is {{distance}} km away.</p>
+    <p class="conditional" *ngIf="!inmoma && located">You had to be at SFMOMA to visit this exhibition. Unfortunately, it looks like you are currently at: {{center}}, which is {{distance}} km away.</p>
 
   </div>
 
@@ -72,27 +69,27 @@
         *ngIf="submiting" 
         (submit)="add(todoForm)">
 
-    <p>Please fill in the form and upload your work here. Every work uploaded will be accepted and exhibited inmmediately. If you have any questions please don't hesitate to contact us: <a href="mailto:unauthorized@sfmoma.show">unauthorized@sfmoma.show</a></p>
+    <p>In order to participate in the exhibition, the submitter had to fill in the following form, upload her/his work in digital format (.jpg, .png or .gif) and press "SUBMIT". All works were immediately accepted, each submission automatically constituting an Unauthorized SFMOMA Solo Show on view at SFMOMA via this website. Each exhibition started when a work was submitted and ended when a new work was submitted. There were NO application or exhibition fees.</p>
 
     <p><span class="red">* Mandatory fields</span></p>
     
     <label for="artist">
       <span class="red">*</span>Name of the artist:<br>
-          <input id="artist" class="text-input" type="text"
+          <input disabled="true" id="artist" class="text-input" type="text"
            name="todoMessage" required
            [(ngModel)]="todoForm.todoMessage"
                       />
     </label>
     <label for="artwork">
       <span class="red">*</span>Title of the artwork:<br>
-          <input id="artwork" class="text-input" type="text"
+          <input disabled="true" id="artwork" class="text-input" type="text"
            name="todoArtwork" required
            [(ngModel)]="todoForm.todoArtwork"
                       />
     </label>
     <label for="date">
       <span class="red">*</span>Date of the artwork:<br>
-          <input id="date" class="number-input" type="number"
+          <input disabled="true" id="date" class="number-input" type="number"
            name="todoDate"
            placeholder="YYYY" required
            [(ngModel)]="todoForm.todoDate"
@@ -100,40 +97,40 @@
     </label>
     <label for="medium">
       Medium: <small>(not mandatory)</small><br>
-          <input id="medium" class="text-input" type="text"
+          <input disabled="true" id="medium" class="text-input" type="text"
            name="todoMedium"
            [(ngModel)]="todoForm.todoMedium"
             />
     </label>
     <label for="size">
       Dimensions/duration: <small>(not mandatory)</small><br>
-          <input id="size" class="text-input" type="text"
+          <input disabled="true" id="size" class="text-input" type="text"
            name="todoSize"
            [(ngModel)]="todoForm.todoSize"
             />
     </label>
     <label for="artist">
       Name of the applicant (if different than name of the artist):<br>
-          <input id="artist" class="text-input" type="text"
+          <input disabled="true" id="artist" class="text-input" type="text"
            name="todoArtist"
            [(ngModel)]="todoForm.todoArtist"
                       />
     </label>
     <label for="email">
       E-mail: <small>(not mandatory)</small><br>
-          <input id="email" class="text-input" type="email"
+          <input disabled="true" id="email" class="text-input" type="email"
            name="todoEmail"
            [(ngModel)]="todoForm.todoEmail"
                       />
     </label>
     <label for="file">
       <span class="red">*</span>File:<br> <small class="red" *ngIf="toobig">The file you selected is too big. Maximum file size allowed is 2MB.</small>
-          <input id="file" class="text-input" type="file" accept="image/*" 
+          <input disabled="true" id="file" class="text-input" type="file" accept="image/*" 
            (change)="fileEvent($event)" required
                       />
     </label>
 
-    <button type="submit" [disabled]="!file || toobig || adding">UPLOAD</button>
+    <button type="submit" disabled="true">UPLOAD</button>
 
     <div id="tyc">
       <h3>SHOW TERMS AND CONDITIONS</h3>
@@ -173,9 +170,9 @@
 
   <div class="todo-list" *ngIf="inmoma && viewing">
     <div class="todo-item">
-         <h1>UNAUTHORIZED SFMOMA SHOW #{{count}}:</h1>
+         <h1>UNAUTHORIZED SFMOMA SHOW ENDED ON JULY 2ND, 2017</h1>
          <div class="art">
-          <h2>{{item?.todoMessage}}</h2>
+          <!-- <h2>{{item?.todoMessage}}</h2>
           <h3>{{item?.todoArtwork}}, {{item?.todoDate}}</h3>
           <h4 *ngIf="item?.todoSize">{{item?.todoSize}}</h4>
           <h5 *ngIf="item?.todoMedium">{{item?.todoMedium}}</h5>
@@ -188,7 +185,7 @@
             <img src="{{item?.file_url}}">
           </div>
 
-          <p>On view from {{item?.createdAt | date:'medium'}} through now.</p>
+          <p>On view from {{item?.createdAt | date:'medium'}} through now.</p> -->
           
           <p>If you have any questions please don't hesitate to contact us: <a href="mailto:unauthorized@sfmoma.show">unauthorized@sfmoma.show</a></p>
          </div>
