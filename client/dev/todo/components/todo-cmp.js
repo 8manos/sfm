@@ -52,7 +52,6 @@ var TodoCmp = (function () {
     }
     TodoCmp.prototype.ngOnInit = function () {
         this._getAll();
-        alert("Unauthorized SFMOMA Show ended on July 2nd, 2017");
     };
     TodoCmp.prototype._getAll = function () {
         var that = this;
@@ -72,6 +71,7 @@ var TodoCmp = (function () {
                 that.count = todos.count;
             });
         });
+        alert("Unauthorized SFMOMA Show ended on July 2nd, 2017");
     };
     TodoCmp.prototype.fileEvent = function (fileInput) {
         var files = fileInput.target.files;

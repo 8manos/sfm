@@ -80,7 +80,6 @@ export class TodoCmp implements OnInit {
 
   ngOnInit() {
     this._getAll();
-    alert("Unauthorized SFMOMA Show ended on July 2nd, 2017");
   }
 
   private _getAll(): void {
@@ -101,6 +100,7 @@ export class TodoCmp implements OnInit {
             that.count = todos.count;
           });
         });
+    alert("Unauthorized SFMOMA Show ended on July 2nd, 2017");
   }
 
   fileEvent(fileInput:any){
