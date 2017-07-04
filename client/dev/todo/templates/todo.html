@@ -43,7 +43,7 @@
         <h2>{{item?.todoMessage}}</h2>
         <h3>{{item?.todoArtwork}}<span *ngIf="item?.todoDate">, {{item?.todoDate}}</span></h3>
         <h4 *ngIf="item?.todoMedium">{{item?.todoMedium}} <span *ngIf="item?.todoSize">({{item?.todoSize}})</span></h4>
-        <h5>On view from {{item?.createdAt | date:'medium'}} through now.</h5>
+        <h5>On view from {{item?.createdAt | date:'medium'}} through {{ '1499065199000' | date:'medium'}}.</h5>
       </article>
       <article *ngFor="let artwork of all; let i = index; ">
         <h1>UNAUTHORIZED SFMOMA SHOW #{{count - i - 1}}</h1>

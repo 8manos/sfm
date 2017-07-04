@@ -20,10 +20,7 @@ module.exports = class TodoController {
   static createTodo(req, res) {
       let _todo = req.body;
 
-      TodoDAO
-        .createTodo(_todo)
-        .then(todo => res.status(201).json(todo))
-        .catch(error => res.status(400).json(error));
+      return true;
   }
 
   static deleteTodo(req, res) {

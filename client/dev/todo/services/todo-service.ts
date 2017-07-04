@@ -41,9 +41,7 @@ export class TodoService {
 
     headers.append("Content-Type", "application/json");
 
-    return this._http
-               .post(TodoService.ENDPOINT.replace(/:id/, ""), message, {headers})
-               .map((r) => r.json());
+    return true;
   }
 
   remove(id: string): Observable<any> {
