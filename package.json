@@ -98,6 +98,6 @@
   },
   "homepage": "https://github.com/anabelle/ng-fullstack-app",
   "engines": {
-    "node": "stable"
+    "node": "0.6.x"
   }
 }
