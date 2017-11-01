@@ -41,7 +41,7 @@ export class TodoService {
 
     headers.append("Content-Type", "application/json");
 
-    return true;
+    return;
   }
 
   remove(id: string): Observable<any> {

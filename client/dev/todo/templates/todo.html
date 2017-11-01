@@ -1,5 +1,5 @@
 <div [class.submiting]="submiting"
-     [class.viewing]="viewing" 
+     [class.viewing]="viewing"
      [class.menuopen]="menuopen"
      class="todo-container">
 
@@ -11,6 +11,7 @@
       <li><a (click)="pasttoggle()" href="#">Exhibitions History</a></li>
       <li><a (click)="view()" href="#">I want to see the exhibition</a></li>
       <li><a (click)="submit()" href="#">I want to have an unauthorized sfmoma show</a></li>
+      <li><a target="_blank" href="https://www.dropbox.com/s/vyh47ok2ktw7l5u/SFMOMA_Catalogue_OPTIMIZED_final.pdf">Catalogue</a></li>
     </ul>
   </nav>
 
@@ -66,13 +67,13 @@
   </div>
 
   <form class="todo-form"
-        *ngIf="submiting" 
+        *ngIf="submiting"
         (submit)="add(todoForm)">
 
     <p>In order to participate in the exhibition, the submitter had to fill in the following form, upload her/his work in digital format (.jpg, .png or .gif) and press "SUBMIT". All works were immediately accepted, each submission automatically constituting an Unauthorized SFMOMA Solo Show on view at SFMOMA via this website. Each exhibition started when a work was submitted and ended when a new work was submitted. There were NO application or exhibition fees.</p>
 
     <p><span class="red">* Mandatory fields</span></p>
-    
+
     <label for="artist">
       <span class="red">*</span>Name of the artist:<br>
           <input disabled="true" id="artist" class="text-input" type="text"
@@ -125,7 +126,7 @@
     </label>
     <label for="file">
       <span class="red">*</span>File:<br> <small class="red" *ngIf="toobig">The file you selected is too big. Maximum file size allowed is 2MB.</small>
-          <input disabled="true" id="file" class="text-input" type="file" accept="image/*" 
+          <input disabled="true" id="file" class="text-input" type="file" accept="image/*"
            (change)="fileEvent($event)" required
                       />
     </label>
@@ -186,7 +187,7 @@
           </div>
 
           <p>On view from {{item?.createdAt | date:'medium'}} through now.</p> -->
-          
+
           <p>If you have any questions please don't hesitate to contact us: <a href="mailto:unauthorized@sfmoma.show">unauthorized@sfmoma.show</a></p>
          </div>
     </div>
